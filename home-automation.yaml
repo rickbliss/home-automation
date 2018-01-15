@@ -1,0 +1,1079 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: 2017-10-15T17:09:29Z
+    creationTimestamp: null
+    generation: 2
+    labels:
+      app: eclipse-mosquitto
+    name: eclipse-mosquitto
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
+        openshift.io/imported-from: eclipse-mosquitto
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/eclipse-mosquitto:latest
+      generation: 2
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    generation: 1
+    labels:
+      app: ffmpeg-rtsp
+    name: ffmpeg-rtsp
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/ffmpeg-rtsp:latest
+      generation: null
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: ""
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/display-name: Golang
+      openshift.io/image.dockerRepositoryCheck: 2017-11-11T16:26:06Z
+    creationTimestamp: null
+    generation: 2
+    name: golang
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        description: |
+          Build and run Go 1.8.1 applications on CentOS 7.
+
+          IMPORTANT: environment variables GOPROJECT_ROOT and GOPROJECT_CMD must be set by corresponding values in "Build Configuration" section, "Environment Variables (Build and Runtime)" list.
+          For example, git URL is "https://github.com/amsokol/openshift-golang-template.git", context directory is "/example-golang-dep" and "main()" function of "main" package is located in "/example-golang-dep/cmd/server".
+          In this case set GOPROJECT_ROOT=github.com/amsokol/openshift-golang-template/example-golang-dep and GOPROJECT_CMD=cmd/server
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang 1.8.1
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: golang:1.8.1,golang
+        tags: builder,golang
+        version: 1.8.1
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:1.8.1
+      generation: 2
+      importPolicy: {}
+      name: 1.8.1
+      referencePolicy:
+        type: Source
+    - annotations:
+        description: |
+          Build and run Go 1.8.2 applications on CentOS 7.
+
+          IMPORTANT: environment variables GOPROJECT_ROOT and GOPROJECT_CMD must be set by corresponding values in "Build Configuration" section, "Environment Variables (Build and Runtime)" list.
+          For example, git URL is "https://github.com/amsokol/openshift-golang-template.git", context directory is "/example-golang-dep" and "main()" function of "main" package is located in "/example-golang-dep/cmd/server".
+          In this case set GOPROJECT_ROOT=github.com/amsokol/openshift-golang-template/example-golang-dep and GOPROJECT_CMD=cmd/server
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang 1.8.2
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: golang:1.8.2,golang
+        tags: builder,golang
+        version: 1.8.2
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:1.8.2
+      generation: 2
+      importPolicy: {}
+      name: 1.8.2
+      referencePolicy:
+        type: Source
+    - annotations:
+        description: |
+          Build and run Go 1.8.3 applications on CentOS 7.
+
+          IMPORTANT: environment variables GOPROJECT_ROOT and GOPROJECT_CMD must be set by corresponding values in "Build Configuration" section, "Environment Variables (Build and Runtime)" list.
+          For example, git URL is "https://github.com/amsokol/openshift-golang-template.git", context directory is "/example-golang-dep" and "main()" function of "main" package is located in "/example-golang-dep/cmd/server".
+          In this case set GOPROJECT_ROOT=github.com/amsokol/openshift-golang-template/example-golang-dep and GOPROJECT_CMD=cmd/server
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang 1.8.3
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: golang:1.8.3,golang
+        tags: builder,golang
+        version: 1.8.3
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:1.8.3
+      generation: 2
+      importPolicy: {}
+      name: 1.8.3
+      referencePolicy:
+        type: Source
+    - annotations:
+        description: |
+          Build and run Go 1.9.0 applications on CentOS 7.
+
+          IMPORTANT: environment variables GOPROJECT_ROOT and GOPROJECT_CMD must be set by corresponding values in "Build Configuration" section, "Environment Variables (Build and Runtime)" list.
+          For example, git URL is "https://github.com/amsokol/openshift-golang-template.git", context directory is "/example-golang-dep" and "main()" function of "main" package is located in "/example-golang-dep/cmd/server".
+          In this case set GOPROJECT_ROOT=github.com/amsokol/openshift-golang-template/example-golang-dep and GOPROJECT_CMD=cmd/server
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang 1.9.0
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: golang:1.9.0,golang
+        tags: builder,golang
+        version: 1.9.0
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:1.9.0
+      generation: 2
+      importPolicy: {}
+      name: 1.9.0
+      referencePolicy:
+        type: Source
+    - annotations:
+        description: |
+          Build and run Go 1.9.1 applications on CentOS 7.
+
+          IMPORTANT: environment variables GOPROJECT_ROOT and GOPROJECT_CMD must be set by corresponding values in "Build Configuration" section, "Environment Variables (Build and Runtime)" list.
+          For example, git URL is "https://github.com/amsokol/openshift-golang-template.git", context directory is "/example-golang-dep" and "main()" function of "main" package is located in "/example-golang-dep/cmd/server".
+          In this case set GOPROJECT_ROOT=github.com/amsokol/openshift-golang-template/example-golang-dep and GOPROJECT_CMD=cmd/server
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang 1.9.1
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: golang:1.9.1,golang
+        tags: builder,golang
+        version: 1.9.1
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:1.9.1
+      generation: 2
+      importPolicy: {}
+      name: 1.9.1
+      referencePolicy:
+        type: Source
+    - annotations:
+        description: Build and run Go applications on CentOS 7.
+        iconClass: icon-go-gopher
+        openshift.io/display-name: Golang (Latest)
+        sampleRepo: https://github.com/amsokol/openshift-golang-template.git
+        supports: nodejs
+        tags: builder,golang
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/golang:latest
+      generation: 1
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    creationTimestamp: null
+    generation: 1
+    labels:
+      app: mqtt-rest
+    name: mqtt-rest
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/mqtt-rest:latest
+      generation: null
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: ""
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: 2017-10-15T17:17:13Z
+    creationTimestamp: null
+    generation: 2
+    labels:
+      app: node-red-docker
+    name: node-red-docker
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        openshift.io/generated-by: OpenShiftWebConsole
+        openshift.io/imported-from: nodered/node-red-docker
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/node-red-docker:latest
+      generation: 2
+      importPolicy: {}
+      name: latest
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    creationTimestamp: null
+    generation: 1
+    labels:
+      app: testgo
+    name: testgo
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+      openshift.io/image.dockerRepositoryCheck: 2017-11-24T14:37:10Z
+    creationTimestamp: null
+    generation: 2
+    labels:
+      app: ffmpeg-rtsp
+    name: ubuntu
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations:
+        openshift.io/imported-from: docker.io/ubuntu:14.04
+      from:
+        kind: DockerImage
+        name: docker-registry.default.svc:5000/home-automation/ubuntu:14.04
+      generation: 2
+      importPolicy: {}
+      name: "14.04"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      template.alpha.openshift.io/wait-for-ready: "true"
+    creationTimestamp: null
+    generation: 1
+    labels:
+      app: mysql-persistent
+      template: mysql-persistent-template
+    name: home
+  spec:
+    replicas: 1
+    selector:
+      name: home
+    strategy:
+      activeDeadlineSeconds: 21600
+      recreateParams:
+        timeoutSeconds: 600
+      resources: {}
+      type: Recreate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          name: home
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                key: database-user
+                name: home
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-password
+                name: home
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-root-password
+                name: home
+          - name: MYSQL_DATABASE
+            valueFrom:
+              secretKeyRef:
+                key: database-name
+                name: home
+          image: centos/mysql-57-centos7@sha256:3c2d3a69b56f5800aedc0f60ab96f671e8bd0d43047e9611ec0634cf29ea53d8
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            tcpSocket:
+              port: 3306
+            timeoutSeconds: 1
+          name: mysql
+          ports:
+          - containerPort: 3306
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -i
+              - -c
+              - MYSQL_PWD="$MYSQL_PASSWORD" mysql -h 127.0.0.1 -u $MYSQL_USER -D $MYSQL_DATABASE
+                -e 'SELECT 1'
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              memory: 512Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/mysql/data
+            name: home-data
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - name: home-data
+          persistentVolumeClaim:
+            claimName: home
+    test: false
+    triggers:
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - mysql
+        from:
+          kind: ImageStreamTag
+          name: mysql:5.7
+          namespace: openshift
+      type: ImageChange
+    - type: ConfigChange
+  status:
+    availableReplicas: 0
+    latestVersion: 0
+    observedGeneration: 0
+    replicas: 0
+    unavailableReplicas: 0
+    updatedReplicas: 0
+- apiVersion: extensions/v1beta1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: null
+    generation: 5
+    labels:
+      app: mosquitto
+    name: eclipse-mosquitto
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: mosquitto
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: mosquitto
+      spec:
+        containers:
+        - image: eclipse-mosquitto
+          imagePullPolicy: Always
+          name: eclipse-mosquitto
+          ports:
+          - containerPort: 1883
+            name: mqtt-port
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: 2017-10-15T17:11:12Z
+      lastUpdateTime: 2017-10-15T17:11:12Z
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 5
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: v1
+  kind: ReplicationController
+  metadata:
+    annotations:
+      openshift.io/deployer-pod.name: home-1-deploy
+      openshift.io/deployment-config.latest-version: "1"
+      openshift.io/deployment-config.name: home
+      openshift.io/deployment.phase: Complete
+      openshift.io/deployment.replicas: "1"
+      openshift.io/deployment.status-reason: image change
+      openshift.io/encoded-deployment-config: |
+        {"kind":"DeploymentConfig","apiVersion":"v1","metadata":{"name":"home","namespace":"home-automation","selfLink":"/apis/apps.openshift.io/v1/namespaces/home-automation/deploymentconfigs/home","uid":"80ed9082-ee4c-11e7-8f9e-fa163e835d77","resourceVersion":"10123256","generation":2,"creationTimestamp":"2017-12-31T17:03:20Z","labels":{"app":"mysql-persistent","template":"mysql-persistent-template"},"annotations":{"template.alpha.openshift.io/wait-for-ready":"true"}},"spec":{"strategy":{"type":"Recreate","recreateParams":{"timeoutSeconds":600},"resources":{},"activeDeadlineSeconds":21600},"triggers":[{"type":"ImageChange","imageChangeParams":{"automatic":true,"containerNames":["mysql"],"from":{"kind":"ImageStreamTag","namespace":"openshift","name":"mysql:5.7"},"lastTriggeredImage":"centos/mysql-57-centos7@sha256:3c2d3a69b56f5800aedc0f60ab96f671e8bd0d43047e9611ec0634cf29ea53d8"}},{"type":"ConfigChange"}],"replicas":1,"test":false,"selector":{"name":"home"},"template":{"metadata":{"creationTimestamp":null,"labels":{"name":"home"}},"spec":{"volumes":[{"name":"home-data","persistentVolumeClaim":{"claimName":"home"}}],"containers":[{"name":"mysql","image":"centos/mysql-57-centos7@sha256:3c2d3a69b56f5800aedc0f60ab96f671e8bd0d43047e9611ec0634cf29ea53d8","ports":[{"containerPort":3306,"protocol":"TCP"}],"env":[{"name":"MYSQL_USER","valueFrom":{"secretKeyRef":{"name":"home","key":"database-user"}}},{"name":"MYSQL_PASSWORD","valueFrom":{"secretKeyRef":{"name":"home","key":"database-password"}}},{"name":"MYSQL_ROOT_PASSWORD","valueFrom":{"secretKeyRef":{"name":"home","key":"database-root-password"}}},{"name":"MYSQL_DATABASE","valueFrom":{"secretKeyRef":{"name":"home","key":"database-name"}}}],"resources":{"limits":{"memory":"512Mi"}},"volumeMounts":[{"name":"home-data","mountPath":"/var/lib/mysql/data"}],"livenessProbe":{"tcpSocket":{"port":3306},"initialDelaySeconds":30,"timeoutSeconds":1,"periodSeconds":10,"successThreshold":1,"failureThreshold":3},"readinessProbe":{"exec":{"command":["/bin/sh","-i","-c","MYSQL_PWD=\"$MYSQL_PASSWORD\" mysql -h 127.0.0.1 -u $MYSQL_USER -D $MYSQL_DATABASE -e 'SELECT 1'"]},"initialDelaySeconds":5,"timeoutSeconds":1,"periodSeconds":10,"successThreshold":1,"failureThreshold":3},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","imagePullPolicy":"IfNotPresent"}],"restartPolicy":"Always","terminationGracePeriodSeconds":30,"dnsPolicy":"ClusterFirst","securityContext":{},"schedulerName":"default-scheduler"}}},"status":{"latestVersion":1,"observedGeneration":1,"replicas":0,"updatedReplicas":0,"availableReplicas":0,"unavailableReplicas":0,"details":{"message":"image change","causes":[{"type":"ImageChange","imageTrigger":{"from":{"kind":"ImageStreamTag","namespace":"openshift","name":"mysql:5.7"}}}]},"conditions":[{"type":"Available","status":"False","lastUpdateTime":"2017-12-31T17:03:20Z","lastTransitionTime":"2017-12-31T17:03:20Z","message":"Deployment config does not have minimum availability."}]}}
+    creationTimestamp: null
+    generation: 1
+    labels:
+      app: mysql-persistent
+      openshift.io/deployment-config.name: home
+      template: mysql-persistent-template
+    name: home-1
+    ownerReferences:
+    - apiVersion: apps.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DeploymentConfig
+      name: home
+      uid: 80ed9082-ee4c-11e7-8f9e-fa163e835d77
+  spec:
+    replicas: 1
+    selector:
+      deployment: home-1
+      deploymentconfig: home
+      name: home
+    template:
+      metadata:
+        annotations:
+          openshift.io/deployment-config.latest-version: "1"
+          openshift.io/deployment-config.name: home
+          openshift.io/deployment.name: home-1
+        creationTimestamp: null
+        labels:
+          deployment: home-1
+          deploymentconfig: home
+          name: home
+      spec:
+        containers:
+        - env:
+          - name: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                key: database-user
+                name: home
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-password
+                name: home
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: database-root-password
+                name: home
+          - name: MYSQL_DATABASE
+            valueFrom:
+              secretKeyRef:
+                key: database-name
+                name: home
+          image: centos/mysql-57-centos7@sha256:3c2d3a69b56f5800aedc0f60ab96f671e8bd0d43047e9611ec0634cf29ea53d8
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            tcpSocket:
+              port: 3306
+            timeoutSeconds: 1
+          name: mysql
+          ports:
+          - containerPort: 3306
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -i
+              - -c
+              - MYSQL_PWD="$MYSQL_PASSWORD" mysql -h 127.0.0.1 -u $MYSQL_USER -D $MYSQL_DATABASE
+                -e 'SELECT 1'
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              memory: 512Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/lib/mysql/data
+            name: home-data
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - name: home-data
+          persistentVolumeClaim:
+            claimName: home
+  status:
+    replicas: 0
+- apiVersion: v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+      template.openshift.io/expose-uri: http://{.spec.host}{.spec.path}
+    creationTimestamp: null
+    labels:
+      app: jenkins-ephemeral
+      template: jenkins-ephemeral-template
+    name: jenkins
+  spec:
+    host: jenkins-home-automation.ocp3.jyiii.org
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: jenkins
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: 2017-11-11T15:21:08Z
+        status: "True"
+        type: Admitted
+      host: jenkins-home-automation.ocp3.jyiii.org
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+      openshift.io/host.generated: "true"
+    creationTimestamp: null
+    labels:
+      app: mqtt-rest
+    name: mqtt-rest
+  spec:
+    host: mqtt-rest-home-automation.ocp3.jyiii.org
+    port:
+      targetPort: 8080-tcp
+    to:
+      kind: Service
+      name: mqtt-rest
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: 2017-10-22T15:49:36Z
+        status: "True"
+        type: Admitted
+      host: mqtt-rest-home-automation.ocp3.jyiii.org
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: null
+    name: nodered-route
+  spec:
+    host: nodered-route-home-automation.ocp3.jyiii.org
+    port:
+      targetPort: 1880-tcp
+    to:
+      kind: Service
+      name: node-red-docker
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: 2017-10-15T17:28:43Z
+        status: "True"
+        type: Admitted
+      host: nodered-route-home-automation.ocp3.jyiii.org
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+      openshift.io/host.generated: "true"
+    creationTimestamp: null
+    labels:
+      app: testgo
+    name: testgo
+  spec:
+    host: testgo-home-automation.ocp3.jyiii.org
+    port:
+      targetPort: 8080-tcp
+    to:
+      kind: Service
+      name: testgo
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: 2017-11-11T16:27:41Z
+        status: "True"
+        type: Admitted
+      host: testgo-home-automation.ocp3.jyiii.org
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      template.openshift.io/expose-uri: mysql://{.spec.clusterIP}:{.spec.ports[?(.name=="mysql")].port}
+    creationTimestamp: null
+    labels:
+      app: mysql-persistent
+      template: mysql-persistent-template
+    name: home
+  spec:
+    ports:
+    - name: mysql
+      port: 3306
+      protocol: TCP
+      targetPort: 3306
+    selector:
+      name: home
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/dependencies: '[{"name": "jenkins-jnlp", "namespace":
+        "", "kind": "Service"}]'
+      service.openshift.io/infrastructure: "true"
+    creationTimestamp: null
+    labels:
+      app: jenkins-ephemeral
+      template: jenkins-ephemeral-template
+    name: jenkins
+  spec:
+    ports:
+    - name: web
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      name: jenkins
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: jenkins-ephemeral
+      template: jenkins-ephemeral-template
+    name: jenkins-jnlp
+  spec:
+    ports:
+    - name: agent
+      port: 50000
+      protocol: TCP
+      targetPort: 50000
+    selector:
+      name: jenkins
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: mosquitto
+    name: mosquitto-service
+  spec:
+    ports:
+    - port: 1883
+      protocol: TCP
+      targetPort: 1883
+    selector:
+      app: mosquitto
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    creationTimestamp: null
+    labels:
+      app: mqtt-rest
+    name: mqtt-rest
+  spec:
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      deploymentconfig: mqtt-rest
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      template.openshift.io/expose-uri: mysql://{.spec.clusterIP}:{.spec.ports[?(.name=="mysql")].port}
+    creationTimestamp: null
+    labels:
+      app: mysql-persistent
+      template: mysql-persistent-template
+    name: mysql
+  spec:
+    ports:
+    - name: mysql
+      port: 3306
+      protocol: TCP
+      targetPort: 3306
+    selector:
+      name: mysql
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    creationTimestamp: null
+    labels:
+      app: node-red-docker
+    name: node-red-docker
+  spec:
+    ports:
+    - name: 1880-tcp
+      port: 1880
+      protocol: TCP
+      targetPort: 1880
+    selector:
+      deploymentconfig: node-red-docker
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    creationTimestamp: null
+    labels:
+      app: testgo
+    name: testgo
+  spec:
+    ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      deploymentconfig: testgo
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: extensions/v1beta1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: null
+    generation: 5
+    labels:
+      app: mosquitto
+      pod-template-hash: "1748178990"
+    name: eclipse-mosquitto-1748178990
+    ownerReferences:
+    - apiVersion: extensions/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: eclipse-mosquitto
+      uid: d8502d95-b1cb-11e7-9703-fa163e835d77
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: mosquitto
+        pod-template-hash: "1748178990"
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: mosquitto
+          pod-template-hash: "1748178990"
+      spec:
+        containers:
+        - image: eclipse-mosquitto
+          imagePullPolicy: Always
+          name: eclipse-mosquitto
+          ports:
+          - containerPort: 1883
+            name: mqtt-port
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 5
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubernetes.io/created-by: |
+        {"kind":"SerializedReference","apiVersion":"v1","reference":{"kind":"ReplicaSet","namespace":"home-automation","name":"eclipse-mosquitto-1748178990","uid":"d851becb-b1cb-11e7-9703-fa163e835d77","apiVersion":"extensions","resourceVersion":"8981962"}}
+      openshift.io/scc: anyuid
+    creationTimestamp: null
+    generateName: eclipse-mosquitto-1748178990-
+    labels:
+      app: mosquitto
+      pod-template-hash: "1748178990"
+    ownerReferences:
+    - apiVersion: extensions/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: eclipse-mosquitto-1748178990
+      uid: d851becb-b1cb-11e7-9703-fa163e835d77
+  spec:
+    containers:
+    - image: eclipse-mosquitto
+      imagePullPolicy: Always
+      name: eclipse-mosquitto
+      ports:
+      - containerPort: 1883
+        name: mqtt-port
+        protocol: TCP
+      resources: {}
+      securityContext:
+        capabilities:
+          drop:
+          - MKNOD
+          - SYS_CHROOT
+        privileged: false
+        seLinuxOptions:
+          level: s0:c10,c0
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-1qwq4
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    imagePullSecrets:
+    - name: default-dockercfg-l3mv3
+    nodeName: 172.22.0.11
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      seLinuxOptions:
+        level: s0:c10,c0
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    volumes:
+    - name: default-token-1qwq4
+      secret:
+        defaultMode: 420
+        secretName: default-token-1qwq4
+  status:
+    phase: Pending
+    qosClass: BestEffort
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubernetes.io/created-by: |
+        {"kind":"SerializedReference","apiVersion":"v1","reference":{"kind":"ReplicationController","namespace":"home-automation","name":"home-1","uid":"811bdc6b-ee4c-11e7-8f9e-fa163e835d77","apiVersion":"v1","resourceVersion":"10123280"}}
+      openshift.io/deployment-config.latest-version: "1"
+      openshift.io/deployment-config.name: home
+      openshift.io/deployment.name: home-1
+      openshift.io/scc: anyuid
+    creationTimestamp: null
+    generateName: home-1-
+    labels:
+      deployment: home-1
+      deploymentconfig: home
+      name: home
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicationController
+      name: home-1
+      uid: 811bdc6b-ee4c-11e7-8f9e-fa163e835d77
+  spec:
+    containers:
+    - env:
+      - name: MYSQL_USER
+        valueFrom:
+          secretKeyRef:
+            key: database-user
+            name: home
+      - name: MYSQL_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: database-password
+            name: home
+      - name: MYSQL_ROOT_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: database-root-password
+            name: home
+      - name: MYSQL_DATABASE
+        valueFrom:
+          secretKeyRef:
+            key: database-name
+            name: home
+      image: centos/mysql-57-centos7@sha256:3c2d3a69b56f5800aedc0f60ab96f671e8bd0d43047e9611ec0634cf29ea53d8
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 30
+        periodSeconds: 10
+        successThreshold: 1
+        tcpSocket:
+          port: 3306
+        timeoutSeconds: 1
+      name: mysql
+      ports:
+      - containerPort: 3306
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - /bin/sh
+          - -i
+          - -c
+          - MYSQL_PWD="$MYSQL_PASSWORD" mysql -h 127.0.0.1 -u $MYSQL_USER -D $MYSQL_DATABASE
+            -e 'SELECT 1'
+        failureThreshold: 3
+        initialDelaySeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        limits:
+          memory: 512Mi
+        requests:
+          memory: 512Mi
+      securityContext:
+        capabilities:
+          drop:
+          - MKNOD
+          - SYS_CHROOT
+        privileged: false
+        seLinuxOptions:
+          level: s0:c10,c0
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/mysql/data
+        name: home-data
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-1qwq4
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    imagePullSecrets:
+    - name: default-dockercfg-l3mv3
+    nodeName: 172.22.0.16
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      seLinuxOptions:
+        level: s0:c10,c0
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    volumes:
+    - name: home-data
+      persistentVolumeClaim:
+        claimName: home
+    - name: default-token-1qwq4
+      secret:
+        defaultMode: 420
+        secretName: default-token-1qwq4
+  status:
+    phase: Pending
+    qosClass: Burstable
+kind: List
+metadata: {}
